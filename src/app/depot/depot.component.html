@@ -1,0 +1,23 @@
+<form [formGroup]="depot" (ngSubmit)="Onsubmitdepot()">
+    <div class="row">
+        <div class="col">
+            <input formControlName="montants" type="number"  class="form-control" placeholder=montants>
+          </div>
+      <div class="col">
+        <input formControlName="numerocompte" type="number"  class="form-control" placeholder="Numerocompte">
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col">
+          <input formControlName="compte" type="number"  class="form-control" placeholder="Compte">
+        </div>
+      <div class="col">
+        <input formControlName="user" type="number"   class="form-control" placeholder=User>
+      </div>
+    </div> <br>
+    <div>
+       <button (click)="Onsubmit()" type="button" class="btn btn-primary float-right" [disabled]="!depot.valid" >Envoyer</button>
+
+
+      </div>
+  </form>

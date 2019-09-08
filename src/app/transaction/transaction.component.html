@@ -1,0 +1,104 @@
+<form [formGroup]="ataya" (ngSubmit)="Onsubmitataya()">
+  <div class="form-row">
+    <div class="col">
+      <input formControlName="nomexp" type="text" class="form-control" placeholder="nomexp">
+    </div>
+    <div class="col">
+      <input formControlName="prenomexp" type="text" class="form-control" placeholder="prenom">
+    </div>
+  </div> <br>
+
+  <div class="form-row">
+    <div class="col">
+      <input formControlName="telexp" type="number" class="form-control" placeholder="telexp">
+    </div>
+    
+    <div class="col">
+      <input formControlName="nomrecep" type="text" class="form-control" placeholder="nomrecep">
+    </div>
+  </div> <br>
+  <div class="form-row">
+    <div class="col">
+      <input formControlName="prenomrecep" type="text" class="form-control" placeholder="prenomrecep">
+    </div>
+    <div class="col">
+      <input formControlName="telrecep"type="number" class="form-control" placeholder="telrecep">
+    </div>
+  </div> <br>
+  <div class="form-row">
+    
+    
+    <div class="col">
+      <input formControlName="mtntenvoi" type="number" class="form-control" placeholder="mtntenvoi">
+    </div> 
+    <div class="col">
+        <input formControlName="etat" type="text" class="form-control" placeholder="etat">      
+     
+    </div>
+  
+  
+  
+  </div> <br>
+  
+      <button type="button" (click)="Ok()" class="btn btn-info" [disabled]="!ataya.valid" >Envoyer</button>
+  
+</form>
+
+
+<br> <br>
+
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+          <th scope="col">ID</th>
+        <th scope="col">Date</th>
+        <th scope="col">Nomexp</th>
+        <th scope="col">Prenomexp</th>
+        <th scope="col">Telexp</th>
+        <th scope="col">Envoitarif</th>
+        <th scope="col">Retraittarif</th>
+       
+        <th scope="col">Nomrecep</th>
+        <th scope="col">Prenomrecep</th>
+        <th scope="col">telrecep</th>
+        <th scope="col">Cni</th>
+        <th scope="col">Codenvoi</th>
+        <th scope="col">User_id</th>
+        <th scope="col">Mtntenvoi</th>
+        <th scope="col">Montanttotal</th>
+        <th scope="col">Dateretrait</th>
+        <th scope="col">Cniretrait</th>
+        <th scope="col">Etat</th>
+
+
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transaction">
+          <td>{{transaction.id}}</td>
+        <td>{{transaction.date}}</td>
+        <td>{{transaction.nomexp}}</td>
+        <td>{{transaction.prenomexp}}</td>
+        <td>{{transaction.telexp}}</td>
+        <td>{{transaction.envoiTarif}}</td>
+        <td>{{transaction.retraitTarif}}</td>
+        <td>{{transaction.nomrecep}}</td>
+        <td>{{transaction.prenomrecep}}</td>
+        <td>{{transaction.telrecep}}</td>
+        <td>{{transaction.cni}}</td>
+        <td>{{transaction.codenvoi}}</td>
+        <td>{{transaction.user_id}}</td>
+        <td>{{transaction.mtntenvoi}}</td>
+        <td>{{transaction.montanttotal}}</td>
+        <td>{{transaction.dateretrait}}</td>
+        <td>{{transaction.cniretrait}}</td>
+        <td>{{transaction.etat}}</td>
+       
+      </tr>
+     
+    </tbody>
+  </table>
+
