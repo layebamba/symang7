@@ -11,6 +11,7 @@ import { Transaction } from './transaction';
 })
 export class TransactionComponent implements OnInit {
   transaction:Transaction[];
+  submitted=false;
  
  transactionUserData={}
 
@@ -24,14 +25,18 @@ export class TransactionComponent implements OnInit {
   ataya= new FormGroup({
     nomexp: new FormControl('',Validators.required),
     prenomexp: new FormControl('',Validators.required),
-    telexp: new FormControl('',Validators.required),
+    telexp: new FormControl('',[Validators.required,Validators.min(7)]),
     nomrecep: new FormControl('',Validators.required),
     prenomrecep: new FormControl('',Validators.required),
     telrecep: new FormControl('',Validators.required),
     mtntenvoi: new FormControl('',[Validators.required,Validators.min(500)]),
-    etat: new FormControl('',Validators.required),
   });
   Onsubmitataya(){}
+
+
+get f(){
+  return this.ataya.controls;
+}
   Ok(){
    console.log(this.ataya.value)
       this._Auth.Ok(this.ataya.value)

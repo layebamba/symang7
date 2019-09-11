@@ -21,7 +21,7 @@ console.log(this.loginUserData)
         res=>{
      // console.log(res.headers.get('Authorization'))
         let jwt=res.body["token"]
-        
+      // let jwt=res.headers.get('Authorization')
         this._auth.saveToken(jwt)
        // this._auth.saveUsername(username);
   
@@ -31,7 +31,7 @@ console.log(this.loginUserData)
        // localStorage.setItem('token',res.token)
        
         
-       // this._router.navigate(['/partenaire'])
+        this._router.navigate(['/'])
 
        
       },
@@ -40,26 +40,26 @@ console.log(this.loginUserData)
     )
 
   }
-  isSuper_admin()
+  isSUPER_ADMIN()
   {
-    return this._auth.isSuper_admin();
+    return this._auth.isSUPER_ADMIN();
   }
-  isPartenaire()
+  isPARTENAIRE()
   {
-    return this._auth.isPartenaire();
+    return this._auth.isPARTENAIRE();
   }
-  isAdmin()
+  isADMIN()
   {
-    return this._auth.isAdmin();
+    return this._auth.isADMIN();
   }
   
-  isCaissier()
+  isCAISSIER()
   {
-    return this._auth.isCaissier();
+    return this._auth.isCAISSIER();
   }
-  isUser()
+  isUSER()
   {
-    return this._auth.isUser();
+    return this._auth.isUSER();
   }
 
  

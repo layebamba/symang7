@@ -1,0 +1,15 @@
+<form [formGroup]="retraitForm" (ngSubmit)="onSubmitretirer()">
+    <div class="row">
+      <div class="col">
+        <label for="codenvoi">codenvoi</label>
+        <input formControlName="codenvoi" type="number" class="form-control" placeholder="codenvoi" [ngClass]="{'is-invalid': submitted && f.codenvoi.errors}">
+  
+
+      <div *ngIf="submitted && f.codenvoi.errors" class="invalid-feedback">
+        <div *ngIf="f.codenvoi.errors.required" >le code invalid ou somme deja retiré</div>  
+      </div>    </div>
+      <div class="col">
+<button type="submit" (click)="ok()" class="btn btn-success" [disabled]="!retraitForm.valid" >Retrait</button> 
+     </div>
+    </div>
+  </form>

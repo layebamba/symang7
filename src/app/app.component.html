@@ -6,11 +6,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li  class="nav-item"  >
-        <a class="nav-link" routerLink="/partenaire" routerLinkActive="active">Partenaire</a>
+      <li   class="nav-item"  >
+        <a  class="nav-link" routerLink="/partenaire" routerLinkActive="active">Partenaire</a>
       </li>
       <li  class="nav-item" >
-        <a  class="nav-link"  routerLink="/user" routerLinkActive="active">user</a>
+        <a   class="nav-link"  routerLink="/user" routerLinkActive="active">user</a>
       </li>
     
       <li  class="nav-item" >
@@ -18,26 +18,31 @@
       </li>
       <li  class="nav-item" >
         <a class="nav-link" routerLink="/depot" routerLinkActive="active">depot</a>
-      </li>
+      </li >
       <li  class="nav-item">
         <a class="nav-link" routerLink="/transaction" routerLinkActive="active">transaction</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/listestransaction" routerLinkActive="active">listestransaction</a>
-      </li>
-
-      <li class="nav-item">
-          <a class="nav-link" routerLink="/register" routerLinkActive="active">register</a>
+        <a class="nav-link" routerLink="/retrait" routerLinkActive="active">retrait</a>
         </li>
+    
+
+      <li  class="nav-item">
+          <a  class="nav-link"  routerLink="/register" routerLinkActive="active">register</a>
+        </li>
+      
+
     </ul>
   </div>
 </nav> 
-    <a class="nav-link"   routerLink="/login" routerLinkActive="active">Login</a>        
+    <a class="nav-link"    routerLink="/login" routerLinkActive="active">Login</a>        
 
     
       
 <div class="container">
-   
-  <router-outlet></router-outlet>    
+  <div class="body1"> 
+  <router-outlet></router-outlet>  
+</div>
+     
 </div>
  

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CompteService } from '../compte.service';
 import { Compte } from './compte';
+import { FormGroup, Validators, FormControl }  from '@angular/forms';
+
 
 @Component({
   selector: 'app-compte',
@@ -32,6 +34,23 @@ export class CompteComponent implements OnInit {
         
    
      
+  }
+
+
+  moneyForm= new FormGroup({
+    ninea:new FormControl('',Validators.required)
+  })
+  onSubmitmoney(){}
+  recherche(){
+    this.comptService.recherche(this.moneyForm.value)
+    .subscribe(
+      res=>{
+        console.log(res)
+      },
+      err=>{
+        console.log(err)
+      }
+    )
   }
 
 }

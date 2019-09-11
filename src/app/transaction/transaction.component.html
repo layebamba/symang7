@@ -4,7 +4,12 @@
       <input formControlName="nomexp" type="text" class="form-control" placeholder="nomexp">
     </div>
     <div class="col">
-      <input formControlName="prenomexp" type="text" class="form-control" placeholder="prenom">
+      <input formControlName="prenomexp" type="text" class="form-control" placeholder="prenom" [ngClass]="{'is-invalid': submitted && f.prenomexp.errors}" >
+      <div *ngIf="submitted && f.prenomex.errors" class="invalid-feedback">
+          <div *ngIf="f.prenomexp.errors.required" >le code invalid ou somme deja retiré</div>  
+        </div> 
+    
+    
     </div>
   </div> <br>
 
@@ -31,10 +36,7 @@
     <div class="col">
       <input formControlName="mtntenvoi" type="number" class="form-control" placeholder="mtntenvoi">
     </div> 
-    <div class="col">
-        <input formControlName="etat" type="text" class="form-control" placeholder="etat">      
-     
-    </div>
+   
   
   
   
@@ -69,7 +71,6 @@
         <th scope="col">Montanttotal</th>
         <th scope="col">Dateretrait</th>
         <th scope="col">Cniretrait</th>
-        <th scope="col">Etat</th>
 
 
        
@@ -95,7 +96,6 @@
         <td>{{transaction.montanttotal}}</td>
         <td>{{transaction.dateretrait}}</td>
         <td>{{transaction.cniretrait}}</td>
-        <td>{{transaction.etat}}</td>
        
       </tr>
      

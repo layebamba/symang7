@@ -12,14 +12,17 @@
           <form class="form">
               <img src="/assets/img/single_user.png" class="mx-auto d-block">
 
-            <div class="form-group">
-              <label for="uname1">Username</label>
-              <input type="text" class="form-control rounded-0" [(ngModel)]="loginUserData.username" name="username" required>
+            <div class="form-group" id="foo">
+                <i class='fas fa-user'></i>
+              <label for="uname1"> 
+                Username</label>
+              <input type="text"  class="form-control rounded-0" [(ngModel)]="loginUserData.username" name="username" required>
             </div>
             <div class="form-group">
-              <label>Password</label>
+              <label><i class="material-icons">enhanced_encryption</i>
+                Password</label>
               <input type="password" class="form-control rounded-0" [(ngModel)]="loginUserData.password" name="password" required>
-              <button type="button" (click)="loginUser()" class="btn btn-success float-right">Login</button>
+              <button type="button" (click)="loginUser()"  class="btn btn-success float-right">Login</button>
             </div>
    
           </form>

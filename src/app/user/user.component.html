@@ -20,7 +20,7 @@
       <td>{{user.username}}</td>
       
       <td>{{user.roles}}</td>
-   
+    
       <td>{{user.nom}}</td>
       <td>{{user.prenom}}</td>
       <td>{{user.adresse}}</td>
@@ -28,8 +28,7 @@
       <td>{{user.telephone}}</td>
       <td>{{user.status}}</td>
       <td>{{user.imageName}}</td>
-      <td> <button class="btn-primary" type="submit" (click)="OnSubmit()" >bloquer</button>
-      <button class="btn-secondary" type="submit" (click)="OnSubmit()" >debloquer</button> </td>
+      <td> <button class="btn-primary" type="submit" (click)="OnSubmit(user.username)" >bloquer</button>
     </tr>
   </tbody>
 </table>

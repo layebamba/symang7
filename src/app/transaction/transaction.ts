@@ -15,11 +15,11 @@ export interface Transaction
     cni:number,
     codenvoi:number,
     user_id:number,
-    mtntretrait:number,
+    mtntenvoi:number,
     montanttotal:number,
     dateretrait:Date,
     cniretrait:number,
-    etat:string
+    
 
 
 

@@ -18,26 +18,26 @@ export class AppComponent implements OnInit {
   
   }
 
-  isSuper_admin()
+  isSUPER_ADMIN()
   {
-    return this._auth.isSuper_admin();
+    return this._auth.isSUPER_ADMIN();
   }
-  isPartenaire()
+  isPARTENAIRE()
   {
-    return this._auth.isPartenaire();
+    return this._auth.isPARTENAIRE();
   }
-  isAdmin()
+  isADMIN()
   {
-    return this._auth.isAdmin();
+    return this._auth.isADMIN();
   }
   
-  isCaissier()
+  isCAISSIER()
   {
-    return this._auth.isCaissier();
+    return this._auth.isCAISSIER();
   }
   isUser()
   {
-    return this._auth.isUser();
+    return this._auth.isUSER();
   }
   isAuthenticated(){
     return this._auth.isAuthenticated();

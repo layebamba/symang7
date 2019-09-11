@@ -21,6 +21,7 @@ import { RegisterComponent } from './register/register.component';
 import { DepotComponent } from './depot/depot.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { CompteService } from './compte.service';
+import { RetraitComponent } from './retrait/retrait.component';
 
 
 
@@ -40,6 +41,8 @@ import { CompteService } from './compte.service';
     DepotComponent,
   
     TransactionComponent,
+  
+    RetraitComponent,
   
    
     

@@ -11,12 +11,24 @@ export class UserComponent implements OnInit {
 user:User[]
 blockData={
   username:null,
-  password:null
+  
 }
   constructor(private userService:UserService) { }
 
   ngOnInit() {
-    this.getUse()
+   
+    this.userService.getUsers()
+    .subscribe(
+res=>{
+  this.user=res
+  console.log(this.user)
+},
+err=>{
+  console.log(err)
+}
+    )
+                                                                                                                                                                                                                                                        
+    
   }
   getUse()
   {
@@ -33,6 +45,19 @@ err=>{
     )
                                                                                                                                                                                                                                                         
     
+  }
+
+  OnSubmit(username)
+  {
+    this.blockData.username=username;
+    this.userService.OnSubmit(this.blockData) .subscribe(
+      res=>{
+        this.ngOnInit();
+        console.log(res)
+      },
+      err=>{
+        console.log(err)
+      })
   }
                                                                                                                                                                                                                                                                                                                                                                                
 }

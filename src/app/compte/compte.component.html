@@ -1,4 +1,28 @@
 
+
+<form [formGroup]="moneyForm" (ngSubmit)="onSubmitmoney()">
+  <div class="row">
+    <div class="col">
+      <input formControlName="ninea" type="text" class="form-control" placeholder="ninea">
+    </div>
+    <div class="col">
+      <button type="submit" (click)="recherche()" class="btn btn-dark" [disabled]="!moneyForm.valid" >rechercher</button>
+    </div>
+  </div>
+</form> <br> <br> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <table class="table table-dark">
   <thead>
     <tr>

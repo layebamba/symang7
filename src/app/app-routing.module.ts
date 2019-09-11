@@ -11,14 +11,16 @@ import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
 import { DepotComponent } from './depot/depot.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { RetraitComponent } from './retrait/retrait.component';
 
 const routes: Routes = [
 
   {
     path:'partenaire',
-    canActivate: [AuthGuard],
     
-    component:PartenaireComponent
+    
+    component:PartenaireComponent,
+    canActivate: [AuthGuard]
   },
  
   {
@@ -27,26 +29,36 @@ const routes: Routes = [
   },
   {
     path:'user',
-    component:UserComponent
+    component:UserComponent,
+    canActivate: [AuthGuard]
   },
 
   {
     path:'compte',
-    component:CompteComponent
+    component:CompteComponent,
+    canActivate: [AuthGuard]
   },
 
   {
     path:'register',
-    component:RegisterComponent
+    component:RegisterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'depot',
-    component:DepotComponent
+    component:DepotComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'transaction',
-    component:TransactionComponent
+    component:TransactionComponent,
+    canActivate: [AuthGuard]
   },
+  {
+    path:'retrait',
+    component:RetraitComponent,
+    canActivate: [AuthGuard]
+  }
  
  
   
